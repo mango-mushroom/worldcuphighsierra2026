@@ -234,28 +234,53 @@ footer a:hover { background:#daa520; }
 </div>
 
 <!-- THE SITE — HORIZONTAL CARD -->
-<div style="background:rgba(7,30,39,0.97);border-top:4px solid var(--orange);border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 32px;">
-  <div style="display:grid;grid-template-columns:1.6fr 1fr 140px;gap:24px;align-items:center;">
+<div style="background:rgba(7,30,39,0.97);border-top:4px solid var(--orange);border-bottom:1px solid rgba(255,255,255,0.08);padding:18px 32px;">
 
-    <!-- Site details -->
-    <div>
-      <h2 style="font-family:'Alfa Slab One',serif;font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:.06em;color:var(--yellow);text-shadow:1px 2px 0 rgba(0,0,0,0.5);margin-bottom:8px;">The Site</h2>
-      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 16px;">
-        <li style="font-size:12px;color:var(--cream2);padding:4px 0 4px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,0.07);line-height:1.4;" data-i="📍">West of Gate 5, behind Vaudeville</li>
-        <li style="font-size:12px;color:var(--cream2);padding:4px 0 4px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,0.07);line-height:1.4;" data-i="🚌">Bus drives in via Gate 4</li>
-        <li style="font-size:12px;color:var(--cream2);padding:4px 0 4px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,0.07);line-height:1.4;" data-i="🌲">Pine trees west — afternoon shade</li>
-        <li style="font-size:12px;color:var(--cream2);padding:4px 0 4px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,0.07);line-height:1.4;" data-i="📡">Open sky north — Starlink line</li>
-        <li style="font-size:12px;color:var(--cream2);padding:4px 0 4px 20px;position:relative;line-height:1.4;" data-i="🅿️">On-site RV parking, exposure to Gate 5</li>
-      </ul>
+  <!-- Title row -->
+  <h2 style="font-family:'Alfa Slab One',serif;font-weight:400;font-size:20px;text-transform:uppercase;letter-spacing:.06em;color:var(--yellow);text-shadow:1px 2px 0 rgba(0,0,0,0.5);margin-bottom:12px;">The Site</h2>
+
+  <!-- Single horizontal strip: 5 bullets + divider + schedule -->
+  <div style="display:flex;align-items:stretch;gap:0;">
+
+    <!-- Bullet 1 -->
+    <div style="flex:1;padding:0 16px 0 0;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;flex-shrink:0;">📍</span>
+      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">West of Gate 5, behind Vaudeville</span>
+    </div>
+
+    <!-- Bullet 2 -->
+    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;flex-shrink:0;">🚌</span>
+      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">Bus drives in via Gate 4</span>
+    </div>
+
+    <!-- Bullet 3 -->
+    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;flex-shrink:0;">🌲</span>
+      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">Pine trees west — afternoon shade</span>
+    </div>
+
+    <!-- Bullet 4 -->
+    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;flex-shrink:0;">📡</span>
+      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">Open sky north — Starlink line</span>
+    </div>
+
+    <!-- Bullet 5 -->
+    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;flex-shrink:0;">🅿️</span>
+      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">On-site RV parking, exposure to Gate 5</span>
     </div>
 
     <!-- Schedule -->
-    <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:2px;padding:12px 14px;">
-      <h3 style="font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--yellow);margin-bottom:8px;">⚽ WC Fixtures (PDT)</h3>
-      <div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.6);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 2</span><span>R32 × 3</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">12p · 4p · 8p</span></div>
-      <div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.6);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 3</span><span>R32 × 3</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">11a · 3p · 6:30p</span></div>
-      <div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.6);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 4</span><span>R16 × 2</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">10a · 2p</span></div>
-      <div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.6);padding:4px 0;"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 5</span><span>R16 × 2</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">1p · 5p</span></div>
+    <div style="flex:0 0 260px;padding:0 0 0 20px;">
+      <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:2px;padding:10px 14px;height:100%;">
+        <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--yellow);margin-bottom:7px;">⚽ WC Fixtures (PDT)</div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 2</span><span>R32 × 3</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">12p · 4p · 8p</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 3</span><span>R32 × 3</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">11a · 3p · 6:30p</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 4</span><span>R16 × 2</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">10a · 2p</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 5</span><span>R16 × 2</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">1p · 5p</span></div>
+      </div>
     </div>
 
   </div>
