@@ -43,9 +43,10 @@ body {
 header {
   background: linear-gradient(180deg, #071e27 0%, var(--teal-dark) 100%);
   border-bottom: 4px solid var(--orange);
-  padding: 22px 20px 50px;
+  padding: 28px 20px 50px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 header::before {
   content: '';
@@ -53,44 +54,46 @@ header::before {
   background: var(--pine);
   clip-path: polygon(0 100%,0 60%,2% 40%,4% 60%,5% 20%,6% 0%,7% 20%,8% 60%,9% 40%,10% 60%,10% 100%,15% 100%,15% 55%,17% 35%,18% 10%,19% 0%,20% 10%,21% 35%,22% 55%,22% 100%,28% 100%,28% 50%,30% 30%,31% 5%,32% 0%,33% 5%,34% 30%,35% 50%,35% 100%,42% 100%,42% 58%,44% 38%,45% 15%,46% 0%,47% 15%,48% 38%,49% 58%,49% 100%,55% 100%,55% 52%,57% 28%,58% 8%,59% 0%,60% 8%,61% 28%,62% 52%,62% 100%,68% 100%,68% 55%,70% 32%,71% 8%,72% 0%,73% 8%,74% 32%,75% 55%,75% 100%,82% 100%,82% 48%,84% 25%,85% 5%,86% 0%,87% 5%,88% 25%,89% 48%,89% 100%,95% 100%,95% 55%,97% 35%,98% 12%,99% 0%,100% 12%,100% 100%);
 }
-.hdr-meta {
-  font-family: 'Alfa Slab One', serif;
-  color: var(--yellow);
-  font-size: 13px;
-  letter-spacing: .06em;
-  margin-bottom: 12px;
+.hdr-festival {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .18em;
+  color: var(--muted);
+  margin-bottom: 8px;
   position: relative; z-index: 1;
+  white-space: nowrap;
 }
 header h1 {
   font-family: 'Alfa Slab One', serif;
-  font-size: 30px; font-weight: 400;
-  text-transform: uppercase; letter-spacing: .04em;
-  color: var(--white); line-height: 1.05;
+  font-size: 19px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: .03em;
+  color: var(--white); line-height: 1.1;
   text-shadow: 2px 3px 0 rgba(0,0,0,0.4);
-  margin-bottom: 8px;
+  margin-bottom: 14px;
+  white-space: nowrap;
   position: relative; z-index: 1;
 }
-header h1 span { color: var(--yellow); }
-.hdr-sub {
-  font-family: 'Oswald', sans-serif;
-  font-size: 11px; color: var(--muted);
-  letter-spacing: .16em; text-transform: uppercase;
-  margin-bottom: 5px;
+.hdr-divider {
+  height: 4px;
+  background: var(--orange);
+  margin: 0 0 14px;
   position: relative; z-index: 1;
 }
-.hdr-coords {
-  font-family: 'Oswald', sans-serif;
-  font-size: 11px; color: var(--muted);
-  letter-spacing: .13em; text-transform: uppercase;
-  margin-bottom: 16px;
+.hdr-proposed {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 22px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--yellow);
+  margin-bottom: 18px;
   position: relative; z-index: 1;
+  text-shadow: 1px 2px 0 rgba(0,0,0,0.4);
 }
 .maps-btn {
   display: block;
   background: var(--orange); color: var(--white);
-  font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700;
+  font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700;
   letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
-  text-align: center; padding: 14px 20px; border-radius: 2px;
+  text-align: center; padding: 13px; border-radius: 2px;
   box-shadow: 0 3px 0 var(--orange2);
   position: relative; z-index: 1;
 }
@@ -110,6 +113,7 @@ header h1 span { color: var(--yellow); }
   font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
   color: var(--yellow); line-height: 1.5;
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
 }
 
 /* ── CAPTION ─────────────────────────────── */
@@ -120,6 +124,7 @@ header h1 span { color: var(--yellow); }
   border-left: 4px solid var(--orange);
   font-size: 14px; color: var(--muted); line-height: 1.7;
   font-style: italic;
+  text-align: center;
 }
 .caption em { color: var(--yellow); font-style: normal; font-weight: 700; }
 
@@ -184,6 +189,7 @@ footer {
   background: var(--pine);
   border-top: 4px solid var(--orange);
   padding: 18px 18px;
+  text-align: center;
 }
 .ftr-info {
   font-family: 'Oswald', sans-serif; font-size: 11px;
@@ -230,9 +236,10 @@ footer {
 
 <!-- HEADER -->
 <header>
-  <h1>⚽ World Cup Venue —<br><span>Proposed Site</span></h1>
-  <p class="hdr-sub">High Sierra Music Festival 2026 · Nevada County Fairgrounds · Grass Valley CA</p>
-  <p class="hdr-coords">Gate 5 / Onsite Parking Edge · 39.206882, -121.081063</p>
+  <p class="hdr-festival">High Sierra Music Festival 2026</p>
+  <h1>⚽ World Cup Venue ⚽</h1>
+  <div class="hdr-divider"></div>
+  <p class="hdr-proposed">Proposed Site</p>
   <a href="https://maps.app.goo.gl/1jDtSjbJe2AqSJRY9" class="maps-btn" target="_blank">📍 Open in Google Maps</a>
 </header>
 
