@@ -210,68 +210,97 @@ footer a {
 }
 footer a:hover { background:#daa520; }
 
-@media (max-width: 640px) {
+/* ── THE SITE SECTION ── */
+.site-section {
+  background:rgba(7,30,39,0.97);
+  border-top:4px solid var(--orange);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:18px 32px;
+}
+.site-title {
+  font-family:'Alfa Slab One',serif; font-weight:400;
+  font-size:20px; text-transform:uppercase;
+  letter-spacing:.06em; color:var(--yellow);
+  text-shadow:1px 2px 0 rgba(0,0,0,0.5);
+  margin-bottom:12px;
+}
+.site-row {
+  display:flex; align-items:stretch; gap:0;
+}
+.site-bullet {
+  flex:1; padding:0 16px 0 0;
+  border-right:1px solid rgba(255,255,255,0.1);
+  display:flex; align-items:center; gap:8px;
+}
+.site-bullet:last-of-type { border-right:none; }
+.bullet-icon { font-size:18px; flex-shrink:0; }
+.bullet-text { font-size:14px; color:var(--cream2); line-height:1.4; }
+.site-schedule {
+  flex:0 0 260px; padding:0 0 0 20px;
+  background:rgba(0,0,0,0.3);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:2px; padding:10px 14px;
+}
+.schedule-label {
+  font-family:'Oswald',sans-serif; font-size:12px; font-weight:600;
+  text-transform:uppercase; letter-spacing:.18em;
+  color:var(--yellow); margin-bottom:7px;
+}
 
-  /* HEADER */
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+
+  /* Header: stack vertically */
   .header-inner {
     flex-direction: column;
-    padding: 20px 18px 44px;
+    padding: 18px 18px 44px;
   }
-  .hdr-left h1 {
-    font-size: 26px;
-    line-height: 1.1;
-  }
-  .hdr-left p {
-    font-size: 10px;
-    margin-top: 4px;
-  }
+  .hdr-left h1 { font-size: 26px; }
   .hdr-right {
     text-align: left;
-    margin-top: 18px;
+    margin-top: 16px;
     font-size: 11px;
-    line-height: 1.9;
-  }
-  .hdr-right strong {
-    font-size: 13px;
+    line-height: 2;
   }
   .hdr-right a {
     display: block;
     text-align: center;
-    padding: 12px 0;
-    margin-top: 10px;
-    font-size: 14px;
+    padding: 11px;
+    margin-top: 8px;
   }
 
-  /* LABELS & CAPTIONS */
-  .label { padding: 9px 16px; font-size: 10px; }
-  .caption { padding: 14px 16px; font-size: 12px; }
-
-  /* SITE CARD */
-  .site-card { padding: 18px 16px; }
-  .site-card h2 { font-size: 18px; }
-  .site-card ul li { font-size: 12px; padding: 5px 0 5px 20px; }
-
-  /* PLAN SECTION - stack image + card vertically */
-  .plan-row { flex-direction: column !important; }
-  .plan-row > * { width: 100% !important; }
-
-  /* SCHEDULE */
-  .schedule { padding: 10px 12px; }
+  /* Site section: stack bullets vertically, schedule full width below */
+  .site-section { padding: 16px 16px; }
+  .site-row { flex-direction: column; gap: 0; }
+  .site-bullet {
+    flex: none;
+    padding: 9px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .site-schedule {
+    flex: none;
+    margin-top: 14px;
+    padding: 10px 12px;
+  }
   .match-row { font-size: 12px; }
 
-  /* FOOTER */
+  /* Labels & captions */
+  .label { padding: 8px 14px; font-size: 10px; }
+  .caption { padding: 12px 16px; font-size: 12px; }
+
+  /* Footer: stack vertically */
   footer {
     flex-direction: column;
-    gap: 6px;
-    padding: 14px 16px;
-    font-size: 11px;
+    align-items: stretch;
+    padding: 14px 18px;
+    gap: 8px;
     text-align: center;
   }
   footer a {
     display: block;
-    margin-top: 4px;
-    padding: 10px 0;
-    font-size: 13px;
+    text-align: center;
+    padding: 10px;
   }
 }
 
@@ -300,55 +329,21 @@ footer a:hover { background:#daa520; }
 </div>
 
 <!-- THE SITE — HORIZONTAL CARD -->
-<div style="background:rgba(7,30,39,0.97);border-top:4px solid var(--orange);border-bottom:1px solid rgba(255,255,255,0.08);padding:18px 32px;">
-
-  <!-- Title row -->
-  <h2 style="font-family:'Alfa Slab One',serif;font-weight:400;font-size:20px;text-transform:uppercase;letter-spacing:.06em;color:var(--yellow);text-shadow:1px 2px 0 rgba(0,0,0,0.5);margin-bottom:12px;">The Site</h2>
-
-  <!-- Single horizontal strip: 5 bullets + divider + schedule -->
-  <div style="display:flex;align-items:stretch;gap:0;">
-
-    <!-- Bullet 1 -->
-    <div style="flex:1;padding:0 16px 0 0;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
-      <span style="font-size:18px;flex-shrink:0;">📍</span>
-      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">West of Gate 5, behind Vaudeville</span>
+<div class="site-section">
+  <h2 class="site-title">The Site</h2>
+  <div class="site-row">
+    <div class="site-bullet"><span class="bullet-icon">📍</span><span class="bullet-text">West of Gate 5, behind Vaudeville</span></div>
+    <div class="site-bullet"><span class="bullet-icon">🚌</span><span class="bullet-text">Bus drives in via Gate 4</span></div>
+    <div class="site-bullet"><span class="bullet-icon">🌲</span><span class="bullet-text">Pine trees west — afternoon shade</span></div>
+    <div class="site-bullet"><span class="bullet-icon">📡</span><span class="bullet-text">Open sky north — Starlink line</span></div>
+    <div class="site-bullet"><span class="bullet-icon">🅿️</span><span class="bullet-text">On-site RV parking, exposure to Gate 5</span></div>
+    <div class="site-schedule">
+      <div class="schedule-label">⚽ WC Fixtures (PDT)</div>
+      <div class="match-row"><span class="match-day">Jul 2</span><span>R32 × 3</span><span class="match-time">12p · 4p · 8p</span></div>
+      <div class="match-row"><span class="match-day">Jul 3</span><span>R32 × 3</span><span class="match-time">11a · 3p · 6:30p</span></div>
+      <div class="match-row"><span class="match-day">Jul 4</span><span>R16 × 2</span><span class="match-time">10a · 2p</span></div>
+      <div class="match-row"><span class="match-day">Jul 5</span><span>R16 × 2</span><span class="match-time">1p · 5p</span></div>
     </div>
-
-    <!-- Bullet 2 -->
-    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
-      <span style="font-size:18px;flex-shrink:0;">🚌</span>
-      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">Bus drives in via Gate 4</span>
-    </div>
-
-    <!-- Bullet 3 -->
-    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
-      <span style="font-size:18px;flex-shrink:0;">🌲</span>
-      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">Pine trees west — afternoon shade</span>
-    </div>
-
-    <!-- Bullet 4 -->
-    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
-      <span style="font-size:18px;flex-shrink:0;">📡</span>
-      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">Open sky north — Starlink line</span>
-    </div>
-
-    <!-- Bullet 5 -->
-    <div style="flex:1;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:8px;">
-      <span style="font-size:18px;flex-shrink:0;">🅿️</span>
-      <span style="font-size:14px;color:var(--cream2);line-height:1.4;">On-site RV parking, exposure to Gate 5</span>
-    </div>
-
-    <!-- Schedule -->
-    <div style="flex:0 0 260px;padding:0 0 0 20px;">
-      <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:2px;padding:10px 14px;height:100%;">
-        <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--yellow);margin-bottom:7px;">⚽ WC Fixtures (PDT)</div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 2</span><span>R32 × 3</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">12p · 4p · 8p</span></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 3</span><span>R32 × 3</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">11a · 3p · 6:30p</span></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 4</span><span>R16 × 2</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">10a · 2p</span></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);padding:3px 0;"><span style="color:var(--teal-light);font-weight:700;font-family:'Oswald',sans-serif;min-width:46px;">Jul 5</span><span>R16 × 2</span><span style="color:var(--yellow);font-family:'Oswald',sans-serif;">1p · 5p</span></div>
-      </div>
-    </div>
-
   </div>
 </div>
 
